@@ -1,7 +1,7 @@
 {
     name: "dashdesc",
     source: [
-        "dashdesc.js",
+        "sisense_dashdesc.js",
     ],
     style: [
         "dashdesc.css"
