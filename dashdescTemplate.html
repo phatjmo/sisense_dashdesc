@@ -7,13 +7,13 @@
     <!--   Body    -->
     <div class="add-edit-body">
         <!--    New Bookmark    -->
-        <div class="group-name-holder input-wrapper filled" placeholder="Type in a description for this dashboard." data-placeholder-stay-on-focus="">
+        <div class="group-name-holder input-wrapper filled" data-placeholder-stay-on-focus="">
             <div class="group-name-text">Edit Description</div>
-            <label for="input-to-focus-0.012347303440045199" style="display: inline-block; margin-left:7px; margin-top:8px; line-height: 24px; font-family:ubuntulight; text-transform:none; font-size:13px; letter-spacing: 0; cursor:text;"></label>
-            <textarea class="group-name-input ng-valid ng-dirty ng-valid-parse ng-touched" style="border:1px solid #e6e6e6;" focus="true" data-ng-model="newDashDesc" id="input-to-focus-0.012347303440045199"></textarea>
+            <!-- <label for="input-to-focus-0.012347303440045199" style="display: inline-block; margin-left:7px; margin-top:8px; line-height: 24px; font-family:ubuntulight; text-transform:none; font-size:13px; letter-spacing: 0; cursor:text;"></label>  placeholder="Type in a description for this dashboard." -->
+            <textarea class="ng-valid ng-dirty ng-valid-parse ng-touched dashdesc-edit-textarea" data-ng-model="newDashDesc" id="input-to-focus-0.012347303440045199" data-ng-value="dashdesc" data-ng-init="newDashDesc = dashdesc" placeholder="Type in a description for this dashboard."></textarea>
         </div>
         <!--    Save New Bookmark   -->
-        <div class="add-edit-group-modal-footer" data-ng-show="newDashDesc.length>0" style="position:relative; margin-top:9px;">
+        <div class="add-edit-group-modal-footer" data-ng-show="newDashDesc.length>=0" style="position:relative; margin-top:9px;">
             <button class="btn-ok" type="button" data-ng-click="saveDashDesc()">Save</button>
         </div>
     </div>
