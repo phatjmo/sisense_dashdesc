@@ -1,0 +1,9 @@
+{
+    name: "dashdesc",
+    source: [
+        "dashdesc.js",
+    ],
+    style: [
+        "dashdesc.css"
+    ]
+}
