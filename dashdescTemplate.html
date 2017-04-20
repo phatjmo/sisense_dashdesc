@@ -1,65 +1,20 @@
-<div class="add-edit-group-modal" data-ng-controller="plugin-bookmarks.controllers.bookmarksController">
+<div class="add-edit-group-modal" data-ng-controller="plugin-dashdesc.controllers.dashdescController">
     <!--    Header  -->
     <div class="modal-header">
-        <div class="title-text">Filter Bookmarks</div>
+        <div class="title-text">Dashboard Description</div>
     </div>
-    <div class="bookmarks-line-border"></div>
-     <!--   Body    -->
+    <div class="dashdesc-line-border"></div>
+    <!--   Body    -->
     <div class="add-edit-body">
         <!--    New Bookmark    -->
-        <div class="group-name-holder input-wrapper filled" 
-            placeholder="Type in a descriptive name for the new bookmark." 
-            data-placeholder-stay-on-focus="">
-            <div class="group-name-text">New Bookmark Name</div>
-            <label for="input-to-focus-0.012347303440045199" 
-                    style="display: inline-block; margin-left:7px; margin-top:8px; line-height: 24px; font-family:ubuntulight; text-transform:none; font-size:13px; letter-spacing: 0; cursor:text;"></label>
-            <input class="group-name-input ng-valid ng-dirty ng-valid-parse ng-touched" 
-                    style="border:1px solid #e6e6e6;"
-                    type="text" 
-                    focus="true" 
-                    data-ng-model="newBookmark.name" 
-                    id="input-to-focus-0.012347303440045199">            
-            <div class="group-name-error-msg ng-hide" 
-                    data-ng-show="!newBookmark.nameChangedIsValid(newBookmark.name)"
-                    style="position:relative; margin-left:172px;">Bookmark already exists with this name.</div>
+        <div class="group-name-holder input-wrapper filled" placeholder="Type in a description for this dashboard." data-placeholder-stay-on-focus="">
+            <div class="group-name-text">Edit Description</div>
+            <label for="input-to-focus-0.012347303440045199" style="display: inline-block; margin-left:7px; margin-top:8px; line-height: 24px; font-family:ubuntulight; text-transform:none; font-size:13px; letter-spacing: 0; cursor:text;"></label>
+            <textarea class="group-name-input ng-valid ng-dirty ng-valid-parse ng-touched" style="border:1px solid #e6e6e6;" focus="true" data-ng-model="newDashDesc" id="input-to-focus-0.012347303440045199"></textarea>
         </div>
         <!--    Save New Bookmark   -->
-        <div class="add-edit-group-modal-footer" 
-            data-ng-show="newBookmark.name.length>0 && newBookmark.nameChangedIsValid(newBookmark.name)"
-            style="position:relative; margin-top:9px;">
-            <button class="btn-ok" type="button" data-ng-click="saveBookmark()">Save</button>
-        </div>
-        <!--    List of Saved Bookmarks     -->
-        <div class="main-body-holder" data-ng-class="{addbtn: uiStates.multiUsers}" style="height:300px;border-bottom:1px solid #e6e6e6;">
-            <div class="main-body-slider" data-ng-class="{addbtn: uiStates.multiUsers}">
-                <div class="multiusers-btn-holder">
-                    <div class="add-multiusers" data-ng-class="{disabled: uiStates.multiusersValidating || uiStates.multiUsersErrorMsg}" data-ng-click="addValidatedUsers()">Add Bookmark</div>
-                </div>
-                <div class="members-list" data-ng-class="{addbtn: uiStates.multiUsers}" style="height:300px;border:1px solid #e6e6e6;">
-                    <div class="no-member-msg ng-hide" data-ng-show="bookmarks.length == 0">No saved Bookmarks</div>
-                    <div>
-                        <div data-ng-repeat="bookmark in bookmarks">
-                            <div class="member-item bookmark-member-item" data-ng-class="{ highlight: item.highlight, ease: item.ease }">
-                                <div class="member-details-holder bookmarks-member-details-holder" data-ng-click="loadBookmark(bookmark)">
-                                    <div class="email-text">{{bookmark.name}}</div>
-                                </div>
-                                <div class="member-actions-holder">
-                                    <div class="line-separator"></div>
-                                    <button class="btn-immutable delete" title="Delete Bookmark" data-ng-click="deleteBookmark(bookmark)">
-                                        <div class="action-icon"></div>
-                                    </button>
-                                </div>
-                                <div class="member-item-border"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="add-edit-group-modal-footer" data-ng-show="newDashDesc.length>0" style="position:relative; margin-top:9px;">
+            <button class="btn-ok" type="button" data-ng-click="saveDashDesc()">Save</button>
         </div>
     </div>
 </div>
-
-
-<!--
-
-        -->
